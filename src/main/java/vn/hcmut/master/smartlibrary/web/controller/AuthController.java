@@ -20,6 +20,8 @@ import vn.hcmut.master.smartlibrary.dto.response.ApiResponse;
 import vn.hcmut.master.smartlibrary.dto.response.JwtAuthenticationResponse;
 import vn.hcmut.master.smartlibrary.model.User;
 import vn.hcmut.master.smartlibrary.security.JwtTokenProvider;
+import vn.hcmut.master.smartlibrary.type.RoleName;
+import vn.hcmut.master.smartlibrary.type.Sex;
 
 import javax.validation.Valid;
 import java.net.URI;
@@ -71,7 +73,8 @@ public class AuthController {
 
         // Creating user's account
         User user = new User(signUpRequest.getName(), signUpRequest.getUsername(), signUpRequest.getEmail(),
-                signUpRequest.getSex(), signUpRequest.getPhone(), signUpRequest.getPassword(), signUpRequest.getRole());
+                Sex.valueOf(signUpRequest.getSex()), signUpRequest.getPhone(),
+                signUpRequest.getPassword(), RoleName.valueOf(signUpRequest.getRole()));
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
