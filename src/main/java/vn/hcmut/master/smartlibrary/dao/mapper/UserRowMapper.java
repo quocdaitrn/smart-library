@@ -2,8 +2,8 @@ package vn.hcmut.master.smartlibrary.dao.mapper;
 
 import org.springframework.jdbc.core.RowMapper;
 import vn.hcmut.master.smartlibrary.model.User;
-import vn.hcmut.master.smartlibrary.type.RoleName;
-import vn.hcmut.master.smartlibrary.type.Sex;
+import vn.hcmut.master.smartlibrary.model.type.RoleName;
+import vn.hcmut.master.smartlibrary.model.type.Sex;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

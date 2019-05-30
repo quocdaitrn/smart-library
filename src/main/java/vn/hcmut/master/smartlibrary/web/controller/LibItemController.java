@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import vn.hcmut.master.smartlibrary.dto.request.LibItemRequest;
 import vn.hcmut.master.smartlibrary.dto.response.ApiResponse;
 import vn.hcmut.master.smartlibrary.model.LibItem;
-import vn.hcmut.master.smartlibrary.security.CurrentUser;
-import vn.hcmut.master.smartlibrary.security.UserPrincipal;
+import vn.hcmut.master.smartlibrary.web.security.CurrentUser;
+import vn.hcmut.master.smartlibrary.web.security.UserPrincipal;
 import vn.hcmut.master.smartlibrary.service.LibItemService;
 
 import javax.validation.Valid;

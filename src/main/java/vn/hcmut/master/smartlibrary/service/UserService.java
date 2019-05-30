@@ -3,8 +3,6 @@ package vn.hcmut.master.smartlibrary.service;
 import vn.hcmut.master.smartlibrary.dto.response.UserProfile;
 import vn.hcmut.master.smartlibrary.model.User;
 
-import java.util.Optional;
-
 public interface UserService {
     User create(User user);
 

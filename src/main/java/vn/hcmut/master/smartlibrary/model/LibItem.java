@@ -1,7 +1,7 @@
 package vn.hcmut.master.smartlibrary.model;
 
-import vn.hcmut.master.smartlibrary.type.LibItemStatus;
-import vn.hcmut.master.smartlibrary.type.LibItemType;
+import vn.hcmut.master.smartlibrary.model.type.LibItemStatus;
+import vn.hcmut.master.smartlibrary.model.type.LibItemType;
 
 public class LibItem extends AbstractModel {
     private String title;

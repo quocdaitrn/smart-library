@@ -8,13 +8,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 import vn.hcmut.master.smartlibrary.dao.LoanDao;
 import vn.hcmut.master.smartlibrary.dao.mapper.LibItemMapper;
-import vn.hcmut.master.smartlibrary.dto.response.ItemResponse;
-import vn.hcmut.master.smartlibrary.dto.response.UserLoan;
 import vn.hcmut.master.smartlibrary.model.*;
-import vn.hcmut.master.smartlibrary.type.LibItemStatus;
-import vn.hcmut.master.smartlibrary.type.LibItemType;
-import vn.hcmut.master.smartlibrary.type.RoleName;
-import vn.hcmut.master.smartlibrary.type.Sex;
+import vn.hcmut.master.smartlibrary.model.type.LibItemStatus;
+import vn.hcmut.master.smartlibrary.model.type.LibItemType;
+import vn.hcmut.master.smartlibrary.model.type.RoleName;
+import vn.hcmut.master.smartlibrary.model.type.Sex;
 
 import java.sql.Types;
 import java.text.DateFormat;

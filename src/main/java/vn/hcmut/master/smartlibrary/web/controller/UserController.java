@@ -1,18 +1,13 @@
 package vn.hcmut.master.smartlibrary.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import vn.hcmut.master.smartlibrary.dto.request.UserRequest;
-import vn.hcmut.master.smartlibrary.dto.response.ApiResponse;
 import vn.hcmut.master.smartlibrary.dto.response.UserIdentityAvailability;
 import vn.hcmut.master.smartlibrary.dto.response.UserProfile;
 import vn.hcmut.master.smartlibrary.dto.response.UserSummary;
-import vn.hcmut.master.smartlibrary.exception.ResourceNotFoundException;
-import vn.hcmut.master.smartlibrary.model.User;
-import vn.hcmut.master.smartlibrary.security.CurrentUser;
-import vn.hcmut.master.smartlibrary.security.UserPrincipal;
+import vn.hcmut.master.smartlibrary.web.security.CurrentUser;
+import vn.hcmut.master.smartlibrary.web.security.UserPrincipal;
 import vn.hcmut.master.smartlibrary.service.UserService;
 
 @RestController

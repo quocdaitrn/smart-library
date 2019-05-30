@@ -6,14 +6,11 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import vn.hcmut.master.smartlibrary.dto.request.LoanRequest;
 import vn.hcmut.master.smartlibrary.dto.response.ApiResponse;
-import vn.hcmut.master.smartlibrary.model.Loan;
-import vn.hcmut.master.smartlibrary.security.CurrentUser;
-import vn.hcmut.master.smartlibrary.security.UserPrincipal;
+import vn.hcmut.master.smartlibrary.web.security.CurrentUser;
+import vn.hcmut.master.smartlibrary.web.security.UserPrincipal;
 import vn.hcmut.master.smartlibrary.service.LoanService;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/loans")

@@ -4,8 +4,8 @@ import org.springframework.jdbc.core.RowMapper;
 import vn.hcmut.master.smartlibrary.model.LibItem;
 import vn.hcmut.master.smartlibrary.model.LibSection;
 import vn.hcmut.master.smartlibrary.model.Publisher;
-import vn.hcmut.master.smartlibrary.type.LibItemStatus;
-import vn.hcmut.master.smartlibrary.type.LibItemType;
+import vn.hcmut.master.smartlibrary.model.type.LibItemStatus;
+import vn.hcmut.master.smartlibrary.model.type.LibItemType;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

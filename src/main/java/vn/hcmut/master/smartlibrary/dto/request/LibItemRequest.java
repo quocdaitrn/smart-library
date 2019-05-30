@@ -3,8 +3,8 @@ package vn.hcmut.master.smartlibrary.dto.request;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import vn.hcmut.master.smartlibrary.type.LibItemStatus;
-import vn.hcmut.master.smartlibrary.type.LibItemType;
+import vn.hcmut.master.smartlibrary.model.type.LibItemStatus;
+import vn.hcmut.master.smartlibrary.model.type.LibItemType;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

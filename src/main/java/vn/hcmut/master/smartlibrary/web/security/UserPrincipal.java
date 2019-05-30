@@ -1,11 +1,11 @@
-package vn.hcmut.master.smartlibrary.security;
+package vn.hcmut.master.smartlibrary.web.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import vn.hcmut.master.smartlibrary.model.User;
-import vn.hcmut.master.smartlibrary.type.Sex;
+import vn.hcmut.master.smartlibrary.model.type.Sex;
 
 import java.util.Collection;
 import java.util.Collections;

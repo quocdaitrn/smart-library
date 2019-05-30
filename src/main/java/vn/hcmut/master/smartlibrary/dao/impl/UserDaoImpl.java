@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import vn.hcmut.master.smartlibrary.dao.UserDao;
 import vn.hcmut.master.smartlibrary.dao.mapper.UserRowMapper;
 import vn.hcmut.master.smartlibrary.model.User;
-import vn.hcmut.master.smartlibrary.type.Sex;
+import vn.hcmut.master.smartlibrary.model.type.Sex;
 
 import java.util.List;
 import java.util.Optional;

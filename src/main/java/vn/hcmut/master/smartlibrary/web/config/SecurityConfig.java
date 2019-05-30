@@ -14,9 +14,9 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import vn.hcmut.master.smartlibrary.security.CustomUserDetailsService;
-import vn.hcmut.master.smartlibrary.security.JwtAuthenticationEntryPoint;
-import vn.hcmut.master.smartlibrary.security.JwtAuthenticationFilter;
+import vn.hcmut.master.smartlibrary.web.security.CustomUserDetailsService;
+import vn.hcmut.master.smartlibrary.web.security.JwtAuthenticationEntryPoint;
+import vn.hcmut.master.smartlibrary.web.security.JwtAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity

@@ -11,7 +11,7 @@ import vn.hcmut.master.smartlibrary.model.LibItem;
 import vn.hcmut.master.smartlibrary.model.LibSection;
 import vn.hcmut.master.smartlibrary.model.Publisher;
 import vn.hcmut.master.smartlibrary.service.LibItemService;
-import vn.hcmut.master.smartlibrary.type.LibItemStatus;
+import vn.hcmut.master.smartlibrary.model.type.LibItemStatus;
 
 import java.util.List;
 

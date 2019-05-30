@@ -1,4 +1,4 @@
-package vn.hcmut.master.smartlibrary.security;
+package vn.hcmut.master.smartlibrary.web.security;
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 

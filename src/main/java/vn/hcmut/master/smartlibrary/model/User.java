@@ -1,7 +1,7 @@
 package vn.hcmut.master.smartlibrary.model;
 
-import vn.hcmut.master.smartlibrary.type.RoleName;
-import vn.hcmut.master.smartlibrary.type.Sex;
+import vn.hcmut.master.smartlibrary.model.type.RoleName;
+import vn.hcmut.master.smartlibrary.model.type.Sex;
 
 public class User extends AbstractModel {
     private String name;

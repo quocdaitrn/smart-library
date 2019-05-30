@@ -19,9 +19,9 @@ import vn.hcmut.master.smartlibrary.dto.request.SignUpRequest;
 import vn.hcmut.master.smartlibrary.dto.response.ApiResponse;
 import vn.hcmut.master.smartlibrary.dto.response.JwtAuthenticationResponse;
 import vn.hcmut.master.smartlibrary.model.User;
-import vn.hcmut.master.smartlibrary.security.JwtTokenProvider;
-import vn.hcmut.master.smartlibrary.type.RoleName;
-import vn.hcmut.master.smartlibrary.type.Sex;
+import vn.hcmut.master.smartlibrary.web.security.JwtTokenProvider;
+import vn.hcmut.master.smartlibrary.model.type.RoleName;
+import vn.hcmut.master.smartlibrary.model.type.Sex;
 
 import javax.validation.Valid;
 import java.net.URI;

@@ -2,8 +2,8 @@ package vn.hcmut.master.smartlibrary.dto.response;
 
 import lombok.Getter;
 import lombok.Setter;
-import vn.hcmut.master.smartlibrary.type.LibItemStatus;
-import vn.hcmut.master.smartlibrary.type.LibItemType;
+import vn.hcmut.master.smartlibrary.model.type.LibItemStatus;
+import vn.hcmut.master.smartlibrary.model.type.LibItemType;
 
 @Getter
 @Setter

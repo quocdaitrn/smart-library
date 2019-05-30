@@ -1,8 +1,8 @@
 package vn.hcmut.master.smartlibrary.dao.mapper;
 
 import vn.hcmut.master.smartlibrary.model.LibItem;
-import vn.hcmut.master.smartlibrary.type.LibItemStatus;
-import vn.hcmut.master.smartlibrary.type.LibItemType;
+import vn.hcmut.master.smartlibrary.model.type.LibItemStatus;
+import vn.hcmut.master.smartlibrary.model.type.LibItemType;
 
 import java.util.Date;
 import java.util.Map;

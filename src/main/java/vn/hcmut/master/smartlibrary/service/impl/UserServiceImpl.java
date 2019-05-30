@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import vn.hcmut.master.smartlibrary.dao.LoanDao;
 import vn.hcmut.master.smartlibrary.dao.UserDao;
-import vn.hcmut.master.smartlibrary.dto.response.UserLoan;
 import vn.hcmut.master.smartlibrary.dto.response.UserProfile;
 import vn.hcmut.master.smartlibrary.exception.ResourceNotFoundException;
 import vn.hcmut.master.smartlibrary.model.Loan;
