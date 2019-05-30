@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApplicationController {
     @GetMapping("/")
     public String ping() {
-        return "Success";
+        return "ok";
     }
 }

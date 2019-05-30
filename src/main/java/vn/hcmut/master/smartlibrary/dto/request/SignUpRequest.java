@@ -2,12 +2,9 @@ package vn.hcmut.master.smartlibrary.dto.request;
 
 import lombok.Getter;
 import lombok.Setter;
-import vn.hcmut.master.smartlibrary.type.RoleName;
-import vn.hcmut.master.smartlibrary.type.Sex;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Getter
@@ -30,11 +27,9 @@ public class SignUpRequest {
     @Size(min = 6, max = 20)
     private String password;
 
-    @NotBlank
     private String sex;
 
     private String phone;
 
-    @NotBlank
     private String role;
 }

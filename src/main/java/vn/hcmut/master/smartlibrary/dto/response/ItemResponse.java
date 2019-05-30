@@ -1,35 +1,24 @@
-package vn.hcmut.master.smartlibrary.dto.request;
+package vn.hcmut.master.smartlibrary.dto.response;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import vn.hcmut.master.smartlibrary.type.LibItemStatus;
 import vn.hcmut.master.smartlibrary.type.LibItemType;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-
-@NoArgsConstructor
 @Getter
 @Setter
-public class LibItemRequest {
+public class ItemResponse {
     private Long id;
-    @NotBlank
     private String title;
-    @NotBlank
     private String cover;
-    @NotNull
     private LibItemType type;
     private String authors;
     private String edition;
     private String inventoryNumber;
     private String description;
-    @NotNull
-    private Long publisherId;
+    private String publisher;
     private Integer price;
     private Integer publishYear;
     private String publishDate;
     private LibItemStatus status;
-    @NotNull
-    private Long libSectionId;
 }

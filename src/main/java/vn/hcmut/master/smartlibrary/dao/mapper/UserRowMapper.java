@@ -24,6 +24,7 @@ public class UserRowMapper implements RowMapper {
         user.setPhone(resultSet.getString("phone"));
         user.setPassword(resultSet.getString("password"));
         user.setRole(RoleName.valueOf(resultSet.getString("role")));
+        user.setCreateAt(resultSet.getDate("created_at"));
 
         return user;
     }

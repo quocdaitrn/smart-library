@@ -5,35 +5,35 @@ import vn.hcmut.master.smartlibrary.type.LibItemType;
 
 public class LibItem extends AbstractModel {
     private String title;
+    private String cover;
     private LibItemType type;
-    private String authors;
-    private String edition;
     private String inventoryNumber;
     private String description;
-    private String publisher;
+    private Publisher publisher;
     private Integer price;
+    private LibItemStatus status;
+    private String authors;
+    private String edition;
     private Integer publishYear;
     private String publishDate;
-    private LibItemStatus status;
-    private Category category;
     private LibSection libSection;
 
     public LibItem() {
     }
 
-    public LibItem(String title, LibItemType type, String authors, String edition, String inventoryNumber, String description, String publisher, Integer price, Integer publishYear, String publishDate, LibItemStatus status, Category category, LibSection libSection) {
+    public LibItem(String title, String cover, LibItemType type, String inventoryNumber, String description, Publisher publisher, Integer price, LibItemStatus status, String authors, String edition, Integer publishYear, String publishDate, LibSection libSection) {
         this.title = title;
+        this.cover = cover;
         this.type = type;
-        this.authors = authors;
-        this.edition = edition;
         this.inventoryNumber = inventoryNumber;
         this.description = description;
         this.publisher = publisher;
         this.price = price;
+        this.status = status;
+        this.authors = authors;
+        this.edition = edition;
         this.publishYear = publishYear;
         this.publishDate = publishDate;
-        this.status = status;
-        this.category = category;
         this.libSection = libSection;
     }
 
@@ -45,28 +45,20 @@ public class LibItem extends AbstractModel {
         this.title = title;
     }
 
+    public String getCover() {
+        return cover;
+    }
+
+    public void setCover(String cover) {
+        this.cover = cover;
+    }
+
     public LibItemType getType() {
         return type;
     }
 
     public void setType(LibItemType type) {
         this.type = type;
-    }
-
-    public String getAuthors() {
-        return authors;
-    }
-
-    public void setAuthors(String authors) {
-        this.authors = authors;
-    }
-
-    public String getEdition() {
-        return edition;
-    }
-
-    public void setEdition(String edition) {
-        this.edition = edition;
     }
 
     public String getInventoryNumber() {
@@ -85,11 +77,11 @@ public class LibItem extends AbstractModel {
         this.description = description;
     }
 
-    public String getPublisher() {
+    public Publisher getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(String publisher) {
+    public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
     }
 
@@ -99,6 +91,30 @@ public class LibItem extends AbstractModel {
 
     public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    public LibItemStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(LibItemStatus status) {
+        this.status = status;
+    }
+
+    public String getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(String authors) {
+        this.authors = authors;
+    }
+
+    public String getEdition() {
+        return edition;
+    }
+
+    public void setEdition(String edition) {
+        this.edition = edition;
     }
 
     public Integer getPublishYear() {
@@ -115,22 +131,6 @@ public class LibItem extends AbstractModel {
 
     public void setPublishDate(String publishDate) {
         this.publishDate = publishDate;
-    }
-
-    public LibItemStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(LibItemStatus status) {
-        this.status = status;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
     }
 
     public LibSection getLibSection() {

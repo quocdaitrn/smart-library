@@ -2,8 +2,16 @@ package vn.hcmut.master.smartlibrary.dao;
 
 import vn.hcmut.master.smartlibrary.model.User;
 
+import java.util.Optional;
+
 public interface UserDao extends BasicDao<User> {
-    User findByEmail(String email);
-    User findByUsername(String username);
-    User findByUsernameOrEmail(String username, String email);
+    Optional<User> findByEmail(String email);
+
+    Optional<User> findByUsername(String username);
+
+    Optional<User> findByUsernameOrEmail(String username, String email);
+
+    boolean existsByUsername(String username);
+
+    boolean existsByEmail(String email);
 }

@@ -8,7 +8,7 @@ import vn.hcmut.master.smartlibrary.type.Sex;
 @NoArgsConstructor
 @Getter
 @Setter
-public class MemberRequest {
+public class UserRequest {
     private Long id;
     private String name;
     private String email;

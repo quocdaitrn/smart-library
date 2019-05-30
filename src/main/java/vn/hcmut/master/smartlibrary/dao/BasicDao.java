@@ -1,11 +1,12 @@
 package vn.hcmut.master.smartlibrary.dao;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface BasicDao<T> {
     List<T> findAll();
 
-    T findById(Long id);
+    Optional<T> findById(Long id);
 
     T create(T obj);
 

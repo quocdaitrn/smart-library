@@ -3,9 +3,9 @@ package vn.hcmut.master.smartlibrary.model;
 import java.util.Date;
 
 public abstract class AbstractModel {
-    private Long id;
-    private Date createAt;
-    private Date updateAt;
+    protected Long id;
+    protected Date createAt;
+    protected Date updateAt;
 
     public Long getId() {
         return id;

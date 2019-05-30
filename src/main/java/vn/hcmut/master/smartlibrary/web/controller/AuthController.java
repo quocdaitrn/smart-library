@@ -25,23 +25,25 @@ import vn.hcmut.master.smartlibrary.type.Sex;
 
 import javax.validation.Valid;
 import java.net.URI;
-import java.util.Collections;
-import java.util.Date;
 
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
-    @Autowired
-    AuthenticationManager authenticationManager;
+    private final AuthenticationManager authenticationManager;
+
+    private final UserDao userDao;
+
+    private final PasswordEncoder passwordEncoder;
+
+    private final JwtTokenProvider tokenProvider;
 
     @Autowired
-    UserDao userDao;
-
-    @Autowired
-    PasswordEncoder passwordEncoder;
-
-    @Autowired
-    JwtTokenProvider tokenProvider;
+    public AuthController(AuthenticationManager authenticationManager, UserDao userDao, PasswordEncoder passwordEncoder, JwtTokenProvider tokenProvider) {
+        this.authenticationManager = authenticationManager;
+        this.userDao = userDao;
+        this.passwordEncoder = passwordEncoder;
+        this.tokenProvider = tokenProvider;
+    }
 
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
@@ -61,20 +63,22 @@ public class AuthController {
 
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignUpRequest signUpRequest) {
-//        if (userRepository.existsByUsername(signUpRequest.getUsername())) {
-//            return new ResponseEntity(new ApiResponse(false, "Username is already taken!"),
-//                    HttpStatus.BAD_REQUEST);
-//        }
-//
-//        if (userRepository.existsByEmail(signUpRequest.getEmail())) {
-//            return new ResponseEntity(new ApiResponse(false, "Email Address already in use!"),
-//                    HttpStatus.BAD_REQUEST);
-//        }
+        if (userDao.existsByUsername(signUpRequest.getUsername())) {
+            return new ResponseEntity<>(new ApiResponse(false, "Username is already taken!"),
+                    HttpStatus.BAD_REQUEST);
+        }
+
+        if (userDao.existsByEmail(signUpRequest.getEmail())) {
+            return new ResponseEntity<>(new ApiResponse(false, "Email Address already in use!"),
+                    HttpStatus.BAD_REQUEST);
+        }
+
+        Sex sex = signUpRequest.getSex() == null ? Sex.MALE : Sex.valueOf(signUpRequest.getSex());
+        RoleName role = signUpRequest.getRole() == null ? RoleName.ROLE_USER : RoleName.valueOf(signUpRequest.getRole());
 
         // Creating user's account
         User user = new User(signUpRequest.getName(), signUpRequest.getUsername(), signUpRequest.getEmail(),
-                Sex.valueOf(signUpRequest.getSex()), signUpRequest.getPhone(),
-                signUpRequest.getPassword(), RoleName.valueOf(signUpRequest.getRole()));
+                sex, signUpRequest.getPhone(), signUpRequest.getPassword(), role);
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
